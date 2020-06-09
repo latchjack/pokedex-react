@@ -4,14 +4,14 @@ import axios from 'axios'
 class PokeIndex extends React.Component {
 
   state = {
-    cards: []
+    monsters: []
   }
 
   async componentDidMount() {
     try {
-      const res = await axios.get('https://api.pokemontcg.io/v1/cards?name')
-      console.log(res.data.cards)
-      this.setState({ cards: res.data.cards })
+      const res = await axios.get('https://pokeapi.co/api/v2/pokemon/')
+      console.log(res.data.results)
+      this.setState({ monsters: res.data.results })
     } catch (err) {
       console.log(err)
     }
@@ -22,7 +22,7 @@ class PokeIndex extends React.Component {
     return (
       <div>
         <div>
-          {this.state.cards.map(card => <li key={card.nationalPokedexNumber}>{card.name}</li>)}
+          {this.state.monsters.map(monster => <li key={monster.name}>{monster.name}</li>)}
         </div>
       </div>
     )
