@@ -17,15 +17,15 @@ class PokeShow extends React.Component {
   }
 
   render() {
-    // const { name, id, species, sprites, height, weight } = this.state.pokemon
+    const { name, id, species, height, weight } = this.state.pokemon
     return (
       <div>
         <p>poke</p>
-        {/* <h1>{name}</h1>
+        <h1>{name}</h1>
         <p>{id}</p>
         <p>{species}</p>
         <p>{height}</p>
-        <p>{weight}</p> */}
+        <p>{weight}</p>
       </div>
     )
   }
