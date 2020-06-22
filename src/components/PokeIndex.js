@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import PokeCard from './PokeCard'
+
 class PokeIndex extends React.Component {
 
   state = {
@@ -22,7 +24,7 @@ class PokeIndex extends React.Component {
     return (
       <div>
         <div>
-          {this.state.monsters.map(monster => <li key={monster.name}>{monster.name}</li>)}
+          {this.state.monsters.map(monster => <PokeCard key={monster.name} {...monster} />)}
         </div>
       </div>
     )
