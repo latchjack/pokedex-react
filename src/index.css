@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-border {
+  border: solid black 2px;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.loading {
+  height: 100px;
+  width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 40px 0;
+  background-image: url('https://seeklogo.com/images/P/pokeball-logo-DC23868CA1-seeklogo.com.png');
+  animation: spin 1s infinite;
+}
