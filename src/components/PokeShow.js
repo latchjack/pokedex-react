@@ -11,6 +11,7 @@ class PokeShow extends React.Component {
     try {
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
       console.log(res.data)
+      this.setState({ pokemon: res.data.results })
     } catch(err) {
       console.log(err)
     }
