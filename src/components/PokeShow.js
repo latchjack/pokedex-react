@@ -22,7 +22,7 @@ class PokeShow extends React.Component {
   render() {
     console.log('rendering page')
     const { data, name, id, species, height, weight } = this.state
-    // if (!data) return <div className="loading"></div>
+    if (!data) return <div className="loading"></div>
     return (
       <div>
         <p>poke</p>
