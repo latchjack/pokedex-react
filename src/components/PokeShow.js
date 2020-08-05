@@ -9,8 +9,8 @@ class PokeShow extends React.Component {
   async componentDidMount() {
     const name = this.props.match.params.id
     try {
-      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
       console.log('component did mount')
+      const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
       console.log(res.data)
       this.setState({ pokemon: res.data.results })
     } catch(err) {
@@ -28,7 +28,7 @@ class PokeShow extends React.Component {
         <p>poke</p>
         <h1>{name}</h1>
         <p>{id}</p>
-        {/* <img src={sprites.front_default} /> */}
+        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`} alt={name}/>
         <p>{species}</p>
         <p>{height}</p>
         <p>{weight}</p>
