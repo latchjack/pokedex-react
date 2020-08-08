@@ -11,7 +11,7 @@ class Navbar extends React.Component {
           <div className="navbar-brand">
             <Link className="navbar-item has-text-white title" to="/">
               <div className="logo">
-              <p className="title">Pokemon</p>
+              <p className="title">Home</p>
               </div>
             </Link>
           </div>
